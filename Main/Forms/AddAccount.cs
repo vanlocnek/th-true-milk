@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Main.Forms
 {
-    public partial class Login : Form
+    public partial class AddAccount : Form
     {
-        public PanelDefault panel;
-        public Login(PanelDefault panel)
+        public AddAccount()
         {
             InitializeComponent();
-            this.panel = panel;
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            this.panel.setFormName("AddAccount");
         }
     }
 }
