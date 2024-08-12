@@ -21,7 +21,20 @@ namespace Main.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.panel.setFormName("AddAccount");
+            Main.Classes.Validation loginVal = new Main.Classes.Validation(username.Text, password.Text);
+            if (loginVal.getStatus() == 0)
+            {
+                MessageBox.Show("Thiếu thông tin đăng nhập!");
+            }
+            else if (loginVal.getStatus() == 1)
+            {
+                MessageBox.Show("Tài khoản hoặc mật khẩu sai");
+            }
+            else if (loginVal.getStatus() == 2)
+            {
+                MessageBox.Show("Đăng nhập thành công <3");
+                
+            }
         }
     }
 }

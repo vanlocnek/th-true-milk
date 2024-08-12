@@ -11,7 +11,7 @@ namespace Main
 {
     class DBS
     {
-        private string ConnectString = @"Data Source=VANLOC\SQLEXPRESS;Initial Catalog=QLBH_LOC;Integrated Security=True";
+        private string ConnectString = @"Data Source=VANLOC\SQLEXPRESS;Initial Catalog=THTRUEMILKDB;Integrated Security=True";
         private SqlConnection sqlConn;
 
         public void Connect()
@@ -63,6 +63,7 @@ namespace Main
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Hàm GET chạy không thành công!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.Write(ex);
             }
             return isSuccess;
         }

@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Validation.cs" />
     <Compile Include="Forms\AddAccount.cs">
       <SubType>Form</SubType>
     </Compile>

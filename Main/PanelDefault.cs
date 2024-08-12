@@ -14,6 +14,7 @@ namespace Main
     {
         private string formName;
         private DBS dbs;
+        private int? user_session;
         public PanelDefault(string formName = null)
         {
             InitializeComponent();
@@ -23,10 +24,12 @@ namespace Main
 
         private void PanelDefault_Load(object sender, EventArgs e)
         {
-            UpdatePanel();
             this.dbs.TestConnect();
+            UpdatePanel();
         }
 
+
+        // Hàm cập nhật lại panel
         public void UpdatePanel()
         {
             // Truyền tên form trống sẽ báo không hợp lệ
@@ -71,13 +74,28 @@ namespace Main
             this.MainBody.Controls.Add(form);
             form.Show();
         }
+        
 
+        // Lưu user id khi đăng nhập thành công
+        public void createSession(int user_id)
+        {
+            this.user_session = user_id;
+        }
+
+        //Xoá user_id khi đăng xuất
+        public void destroySession()
+        {
+            this.user_session = null;
+        }
+
+        // Truyền tên form để load form con vào Panel
         public void setFormName(string name)
         {
             this.formName = name;
             UpdatePanel();
         }
 
+        // Đặt tiêu đề cho Panel
         private void setFormTitle(string name = "Undefined!") {
             this.Text = name;
         }

@@ -51,7 +51,7 @@
             // CloseApplicationButton
             // 
             this.CloseApplicationButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CloseApplicationButton.BackColor = System.Drawing.Color.IndianRed;
+            this.CloseApplicationButton.BackColor = System.Drawing.Color.DarkSalmon;
             this.CloseApplicationButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CloseApplicationButton.FlatAppearance.BorderSize = 0;
             this.CloseApplicationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -101,7 +101,7 @@
             // 
             this.UserListMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.UserListMenuItem.Name = "UserListMenuItem";
-            this.UserListMenuItem.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.UserListMenuItem.Padding = new System.Windows.Forms.Padding(0);
             this.UserListMenuItem.Size = new System.Drawing.Size(236, 30);
             this.UserListMenuItem.Text = "Danh Sách";
             // 
@@ -109,7 +109,7 @@
             // 
             this.AddUserMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.AddUserMenuItem.Name = "AddUserMenuItem";
-            this.AddUserMenuItem.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.AddUserMenuItem.Padding = new System.Windows.Forms.Padding(0);
             this.AddUserMenuItem.Size = new System.Drawing.Size(236, 30);
             this.AddUserMenuItem.Text = "Thêm Tài Khoản";
             // 
@@ -117,7 +117,7 @@
             // 
             this.ChangePasswordMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.ChangePasswordMenuItem.Name = "ChangePasswordMenuItem";
-            this.ChangePasswordMenuItem.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.ChangePasswordMenuItem.Padding = new System.Windows.Forms.Padding(0);
             this.ChangePasswordMenuItem.Size = new System.Drawing.Size(236, 30);
             this.ChangePasswordMenuItem.Text = "Đổi Mật Khẩu";
             // 
@@ -156,7 +156,7 @@
             // 
             this.DetailBillMenuItem.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.DetailBillMenuItem.Name = "DetailBillMenuItem";
-            this.DetailBillMenuItem.Size = new System.Drawing.Size(181, 32);
+            this.DetailBillMenuItem.Size = new System.Drawing.Size(159, 32);
             this.DetailBillMenuItem.Text = "Chi Tiết";
             // 
             // Logo
