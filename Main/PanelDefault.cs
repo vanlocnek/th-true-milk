@@ -15,6 +15,7 @@ namespace Main
         private string formName;
         private DBS dbs;
         private int? user_session;
+        private int[] user_scopes;
         public PanelDefault(string formName = null)
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace Main
         {
             this.dbs.TestConnect();
             UpdatePanel();
+            UpdateScopes();
         }
 
 
@@ -60,8 +62,14 @@ namespace Main
             }
         }
 
+        // Hàm cập nhật phạm vi người dùng
+        public void UpdateScopes()
+        {
+
+        }
+
         public void RunChildForm(Form form) {
-            setFormTitle(form.Text);
+            SetFormTitle(form.Text);
             this.MenuStrip.Visible = true;
             this.CloseApplicationButton.Visible = true;
             this.Logo.Visible = true;
@@ -77,26 +85,27 @@ namespace Main
         
 
         // Lưu user id khi đăng nhập thành công
-        public void createSession(int user_id)
+        public void CreateSession(int user_id)
         {
             this.user_session = user_id;
         }
 
         //Xoá user_id khi đăng xuất
-        public void destroySession()
+        public void DestroySession()
         {
             this.user_session = null;
         }
 
         // Truyền tên form để load form con vào Panel
-        public void setFormName(string name)
+        public void SetFormName(string name)
         {
             this.formName = name;
             UpdatePanel();
+            UpdateScopes();
         }
 
         // Đặt tiêu đề cho Panel
-        private void setFormTitle(string name = "Undefined!") {
+        private void SetFormTitle(string name = "Undefined!") {
             this.Text = name;
         }
 
@@ -107,7 +116,7 @@ namespace Main
 
         private void Logo_Click(object sender, EventArgs e)
         {
-            setFormName("Home");
+            SetFormName("Home");
         }
     }
 }

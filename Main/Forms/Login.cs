@@ -22,18 +22,27 @@ namespace Main.Forms
         private void btnLogin_Click(object sender, EventArgs e)
         {
             Main.Classes.Validation loginVal = new Main.Classes.Validation(username.Text, password.Text);
-            if (loginVal.getStatus() == 0)
+            if (loginVal.GetStatus() == 0)
             {
                 MessageBox.Show("Thiếu thông tin đăng nhập!");
             }
-            else if (loginVal.getStatus() == 1)
+            else if (loginVal.GetStatus() == 1)
             {
                 MessageBox.Show("Tài khoản hoặc mật khẩu sai");
             }
-            else if (loginVal.getStatus() == 2)
+            else if (loginVal.GetStatus() == 2)
             {
                 MessageBox.Show("Đăng nhập thành công <3");
-                
+                if (loginVal.HasAdmin())
+                {
+                    MessageBox.Show("Xin chào quản trị viên!");
+
+                }
+
+            }
+            else if (loginVal.GetStatus() == 3)
+            {
+                MessageBox.Show("Người dùng chưa được cấp quyền nào!");
             }
         }
     }
